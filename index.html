@@ -6,26 +6,16 @@
         
         <title>Spark Youth Center</title>
 
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="input.css">
+        <link href="./dist/output.css" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=arimo:400,600,700|dela-gothic-one:400" rel="stylesheet" />
         
-        <script src="https://cdn.tailwindcss.com"></script>
-        <script>
-            tailwind.config = {
-                theme: {
-                    fontFamily: {
-                        dela: ['"Dela Gothic One", sans-serif'],
-                        arimo: ['"Arimo", sans-serif'],
-                    },
-                }
-            }
-        </script>
         <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
         <script src="js/translation.js"></script>
         <script src="js/app.js"></script>
     </head>
-    <body x-data="{switcher:translationSwitcher()}" class="font-arimo bg-gradient-to-br from-purple-400 to-yellow-400">
+    <body x-data="{switcher:translationSwitcher()}" class="font-arimo bg-gradient-to-br from-blue-500 to-yellow-400">
         <div id="header"></div>
         <div id="hero"></div>
         <div id="events"></div>
