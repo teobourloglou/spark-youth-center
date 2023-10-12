@@ -17,7 +17,15 @@
     </head>
     <body x-data="{switcher:translationSwitcher()}" class="font-arimo bg-gradient-to-br from-blue-500 to-yellow-400">
         <div id="header"></div>
-        <div id="events"></div>
+        <div id="allEvents"></div>
         <div id="footer"></div>
     </body>
+    <script>
+        const eventComponents = [
+            { name: "header", elementId: "header" },
+            { name: "allEvents", elementId: "allEvents" },
+            { name: "footer", elementId: "footer" },
+        ];
+        fetchComponents(eventComponents);
+    </script>
 </html>

@@ -2,22 +2,29 @@ const googleSheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRbhxTRB
 const componentsArray = [
     { name: "header", elementId: "header" },
     { name: "hero", elementId: "hero" },
-    { name: "events", elementId: "events" },
+    { name: "allEvents", elementId: "allEvents" },
+    { name: "someEvents", elementId: "someEvents" },
     { name: "content", elementId: "content" },
     { name: "about", elementId: "about" },
     { name: "footer", elementId: "footer" },
   ];
 
 
-function fetchEvents(url) {
+function fetchEvents(url, only8) {
     fetch(url)
       .then((response) => response.text())
       .then((html) => {
         const parser = new DOMParser();
         const doc = parser.parseFromString(html, 'text/html');
         const rows = Array.from(doc.querySelectorAll('table tr')).slice(3);
+
+        let numberOfPosts = 0;
     
         rows.forEach((row) => {
+            if (only8 && numberOfPosts > 7) {
+                return;
+            }
+
             const columns = row.querySelectorAll('td');
     
             if (columns.length === 6) {
@@ -41,6 +48,7 @@ function fetchEvents(url) {
             `
                 
                 eventContainer.appendChild(article);
+                numberOfPosts++;
             }
         });
     
@@ -57,11 +65,11 @@ function fetchComponents(components) {
       .then((response) => response.text())
       .then((data) => {
         document.getElementById(elementId) ? document.getElementById(elementId).innerHTML = data : '';
-        if (elementId == 'events') {
-            fetchEvents(googleSheetUrl)
+        if (name == 'allEvents') {
+            fetchEvents(googleSheetUrl, false);
+        } else if (name == 'someEvents') {
+            fetchEvents(googleSheetUrl, true);
         }
       });
   });
 }
-
-fetchComponents(componentsArray);
