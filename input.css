@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+    background-color: black;
+    background-image: linear-gradient(to right bottom, rgb(234, 179, 8), rgb(147, 197, 253), rgb(59, 130, 246));
+}
+
 .neobrut-border {
     box-shadow: 3px 2px black;
     border: 3px solid black;

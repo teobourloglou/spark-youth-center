@@ -38,8 +38,9 @@ function fetchEvents(url, only8) {
                 <img src="${columns[2].textContent}" alt="" class="inset-0 w-full aspect-square object-cover">
                 </div>
                 <h3 class="p-3 bg-white text-lg font-semibold leading-6 text-black border-t-[3px] border-black">
-                ${columns[0].textContent}
+                    ${columns[0].textContent}
                 </h3>
+                <span class="absolute inline lg:hidden left-2 top-2 neobrut-border px-2 py-1 bg-red-500 text-black font-semibold text-sm">Tap for info</span>
                 <div class="absolute w-full h-full opacity-0 group-hover:opacity-100 bg-white transition-opacity duration-500 flex flex-col p-3 justify-around">
                 <time class="font-semibold text-center">🕔 ${columns[3].textContent}</time>
                 <p class="font-semibold text-center">📍 ${columns[4].textContent}</p>
