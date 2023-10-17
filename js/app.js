@@ -21,7 +21,7 @@ function fetchEvents(url, only8) {
         let numberOfPosts = 0;
     
         rows.forEach((row) => {
-            if (only8 && numberOfPosts > 7) {
+            if (only8 && numberOfPosts > 9) {
                 return;
             }
 
@@ -29,22 +29,21 @@ function fetchEvents(url, only8) {
     
             if (columns.length === 6) {
                 const article = document.createElement('article');
-                article.className = 'relative isolate flex flex-col justify-end overflow-hidden neobrut-border bg-gray-900 group';
+                article.className = 'relative flex flex-col justify-end overflow-hidden bg-gray-900 isolate rounded-xl group';
                 article.innerHTML = `
                 <div class="w-full h-auto">
-                <span class="flex justify-center items-center font-semibold bg-white absolute right-0 p-3 border-l-[3px] border-b-[3px] border-black">
-                    ${columns[1].textContent}
-                </span>
-                <img src="${columns[2].textContent}" alt="" class="inset-0 w-full aspect-square object-cover">
+                    <img src="${columns[2].textContent}" alt="" class="inset-0 w-full aspect-1/2 object-cover">
                 </div>
-                <h3 class="p-3 bg-white text-lg font-semibold leading-6 text-black border-t-[3px] border-black">
-                    ${columns[0].textContent}
-                </h3>
-                <span class="absolute inline lg:hidden left-2 top-2 neobrut-border px-2 py-1 bg-red-500 text-black font-semibold text-sm">Tap for info</span>
-                <div class="absolute w-full h-full opacity-0 group-hover:opacity-100 bg-white transition-opacity duration-500 flex flex-col p-3 justify-around">
-                <time class="font-semibold text-center">🕔 ${columns[3].textContent}</time>
-                <p class="font-semibold text-center">📍 ${columns[4].textContent}</p>
-                <p class="font-semibold text-center">⚡️ ${columns[5].textContent}</p>
+                <div class="absolute bottom-12 z-20 flex flex-col items-center gap-5 w-full p-3 text-center group-hover:-translate-y-12 transition-all duration-1000">
+                    <h3 class=" text-3xl font-dela leading-6 text-white ">${columns[0].textContent}</h3>
+                    <hr class="w-[72px] border-b-[3px] border-flame">
+                    <p class="text-xl text-white">${columns[1].textContent}</p>
+                </div>
+                <div class="absolute w-full h-full  opacity-25 group-hover:opacity-75 bg-black transition-opacity duration-1000"></div>
+                <div class="absolute w-full h-2/3 z-10 top-0 flex flex-col p-3 text-white justify-around opacity-0 group-hover:opacity-100 transition-opacity duration-1000">
+                    <time class="font-semibold text-center">🕔 ${columns[3].textContent}</time>
+                    <p class="font-semibold text-center">📍 ${columns[4].textContent}</p>
+                    <p class="font-semibold text-center">⚡️ ${columns[5].textContent}</p>
                 </div>
             `
                 

@@ -1,15 +1,15 @@
 <header class="" x-data="{ isOpen : false }">
-    <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+    <nav class="flex items-center justify-between p-6 mx-auto max-w-7xl lg:px-8" aria-label="Global">
       <div class="flex flex-1">
         <div class="hidden lg:flex lg:gap-x-12">
-          <a href="index.html" class="text-sm font-semibold leading-6 text-black hover:scale-110 transition-transform duration-300" x-text="switcher.home[switcher.languages[switcher.selected].lang]"></a>
-          <a href="events.html" class="text-sm font-semibold leading-6 text-black hover:scale-110 transition-transform duration-300">Events</a>
-          <a href="about.html" class="text-sm font-semibold leading-6 text-black hover:scale-110 transition-transform duration-300" x-text="switcher.about[switcher.languages[switcher.selected].lang]"></a>
+          <a href="index.html" class="text-sm font-semibold leading-6 text-white transition-transform duration-300 hover:scale-110" x-text="switcher.home[switcher.languages[switcher.selected].lang]"></a>
+          <a href="events.html" class="text-sm font-semibold leading-6 text-white transition-transform duration-300 hover:scale-110">Events</a>
+          <a href="create.html" class="text-sm font-semibold leading-6 text-white transition-transform duration-300 hover:scale-110" x-text="switcher.create[switcher.languages[switcher.selected].lang]"></a>
         </div>
         <div class="flex lg:hidden">
-          <button @click="isOpen = true" type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-black">
+          <button @click="isOpen = true" type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white">
             <span class="sr-only">Open main menu</span>
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu text-black" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <svg xmlns="http://www.w3.org/2000/svg" class="text-white icon icon-tabler icon-tabler-menu" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
               <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
               <path d="M4 8l16 0"></path>
               <path d="M4 16l16 0"></path>
@@ -19,28 +19,27 @@
       </div>
       <a href="index.html" class="-m-1.5 p-1.5  relative top-[0.4rem]">
         <span class="sr-only">Spark Youth Center</span>
-        <img class="w-24 sm:w-36 h-auto transition-transform duration-300 hover:scale-110" src="photos/spark-logo-black.png" alt="">
+        <img class="w-24 h-auto transition-transform duration-300 sm:w-48 hover:scale-110" src="photos/spark-logo-white.png" alt="">
       </a>
-      <div class="flex flex-1 justify-end lg:gap-x-12">
-        <a href="#" class="text-sm hidden lg:flex font-semibold items-center leading-6 text-black" x-text="switcher.get_involved[switcher.languages[switcher.selected].lang]"></a>
+      <div class="flex justify-end flex-1 lg:gap-x-12">
         <div class="w-24">
             <div class="relative flex justify-end lg:block" @click.away="switcher.menuToggle=false">
-                <button class="text-sm font-semibold text-black focus:outline-none" @click.prevent="switcher.menuToggle=!switcher.menuToggle">
+                <button class="text-sm font-semibold text-white focus:outline-none" @click.prevent="switcher.menuToggle=!switcher.menuToggle">
                     <span class="w-6" x-text="switcher.languages[switcher.selected].label"></span>
-                    <span aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler inline icon-tabler-chevron-down w-4" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <span aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" class="inline w-4 icon icon-tabler icon-tabler-chevron-down" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                       <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                       <path d="M6 9l6 6l6 -6"></path>
                    </svg></span>
                 </button>
-                <div class="bg-white text-black rounded-xl neobrut-border text-sm absolute mt-8 top-0 right-0 z-30" x-show="switcher.menuToggle" x-transition:enter="transition ease duration-300 transform" x-transition:enter-start="opacity-0 translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease duration-300 transform" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-4">
-                    <div class="bg-white overflow-auto rounded-xl relative z-10">
+                <div class="absolute top-0 right-0 z-30 mt-8 text-sm text-black bg-white rounded-xl" x-show="switcher.menuToggle" x-transition:enter="transition ease duration-300 transform" x-transition:enter-start="opacity-0 translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease duration-300 transform" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-4">
+                    <div class="relative z-10 overflow-auto bg-white rounded-xl">
                       <ul class="list-reset">
                         <template x-for="(item, index) in switcher.languages">
                           <li>
-                            <a href="#" class="px-4 py-2 flex hover:bg-gray-100 no-underline hover:no-underline transition-colors duration-100" @click.prevent="switcher.menuToggle=false;switcher.selected=index;">
+                            <a href="#" class="flex px-4 py-2 no-underline transition-colors duration-100 hover:bg-gray-100 hover:no-underline" @click.prevent="switcher.menuToggle=false;switcher.selected=index;">
                               <span class="inline-block font-semibold text-black" x-text="item.label"></span>
                               <template x-if="index==switcher.selected">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler text-black icon-tabler-check ml-2 w-4" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 ml-2 text-black icon icon-tabler icon-tabler-check" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                                   <path d="M5 12l5 5l10 -10"></path>
                                </svg>
@@ -58,10 +57,10 @@
     <div role="dialog" aria-modal="true">
       <!-- Background backdrop, show/hide based on slide-over state. -->
       <div x-show="isOpen" class="fixed inset-0 z-10"></div>
-      <div x-show="isOpen" class="fixed inset-y-0 left-0 z-10 w-full overflow-y-auto bg-black px-6 py-6">
+      <div x-show="isOpen" class="fixed inset-y-0 left-0 z-10 w-full px-6 py-6 overflow-y-auto bg-white">
         <div class="flex items-center justify-between">
           <div class="flex flex-1">
-            <button @click="isOpen = false" type="button" class="-m-2.5 rounded-md p-2.5 text-white">
+            <button @click="isOpen = false" type="button" class="-m-2.5 rounded-md p-2.5 text-black">
               <span class="sr-only">Close menu</span>
               <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -72,15 +71,14 @@
           </div>
           <a href="#" class="-m-1.5 p-1.5 relative top-[0.4rem]">
             <span class="sr-only">Spark Youth Center</span>
-            <img class="w-24 sm:w-36 h-auto" src="photos/spark-logo-white.png" alt="">
+            <img class="w-24 h-auto sm:w-36" src="photos/spark-logo-black.png" alt="">
           </a>
-          <div class="flex flex-1 justify-end"></div>
+          <div class="flex justify-end flex-1"></div>
         </div>
         <div class="mt-6 space-y-2 h-[80vh] flex flex-col justify-center items-center gap-10">
-          <a href="index.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-50" x-text="switcher.home[switcher.languages[switcher.selected].lang]"></a>
-          <a href="events.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-50">Events</a>
-          <a href="about.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-50" x-text="switcher.about[switcher.languages[switcher.selected].lang]"></a>
-          <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-50" x-text="switcher.get_involved[switcher.languages[switcher.selected].lang]"></a>
+          <a href="index.html" class="block px-3 py-2 -mx-3 text-base font-semibold leading-7 text-black rounded-lg hover:bg-gray-50" x-text="switcher.home[switcher.languages[switcher.selected].lang]"></a>
+          <a href="events.html" class="block px-3 py-2 -mx-3 text-base font-semibold leading-7 text-black rounded-lg hover:bg-gray-50">Events</a>
+          <a href="create.html" class="block px-3 py-2 -mx-3 text-base font-semibold leading-7 text-black rounded-lg hover:bg-gray-50" x-text="switcher.create[switcher.languages[switcher.selected].lang]"></a>
         </div>
       </div>
     </div>

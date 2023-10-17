@@ -18,17 +18,23 @@
     <body x-data="{switcher:translationSwitcher()}" class="font-arimo">
         <div id="header"></div>
         <div id="hero"></div>
+        <div id="statement"></div>
+        <div id="about"></div>
+        <div id="spaces"></div>
         <div id="someEvents"></div>
-        <div id="content"></div>
+        <div id="contact"></div>
         <div id="footer"></div>
     </body>
     <script>
         const homeComponents = [
-            { name: "header", elementId: "header" },
-            { name: "hero", elementId: "hero" },
-            { name: "someEvents", elementId: "someEvents" },
-            { name: "content", elementId: "content" },
-            { name: "footer", elementId: "footer" },
+            { name: "header",       elementId: "header"     },
+            { name: "hero",         elementId: "hero"       },
+            { name: "statement",    elementId: "statement"  },
+            { name: "about",        elementId: "about"      },
+            { name: "spaces",       elementId: "spaces"     },
+            { name: "someEvents",   elementId: "someEvents" },
+            { name: "contact",      elementId: "contact"    },
+            { name: "footer",       elementId: "footer"     },
         ];
         fetchComponents(homeComponents);
     </script>

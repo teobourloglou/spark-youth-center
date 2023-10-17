@@ -17,13 +17,11 @@
     </head>
     <body x-data="{switcher:translationSwitcher()}" class="font-arimo">
         <div id="header"></div>
-        <div id="about"></div>
         <div id="footer"></div>
     </body>
     <script>
         const aboutComponents = [
             { name: "header", elementId: "header" },
-            { name: "about", elementId: "about" },
             { name: "footer", elementId: "footer" },
         ];
         fetchComponents(aboutComponents);
