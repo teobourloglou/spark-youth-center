@@ -36,7 +36,7 @@
                       <ul class="list-reset">
                         <template x-for="(item, index) in switcher.languages">
                           <li>
-                            <a href="#" class="flex px-4 py-2 no-underline transition-colors duration-100 hover:bg-gray-100 hover:no-underline" @click.prevent="switcher.menuToggle=false;switcher.selected=index;">
+                            <a href="#" class="flex px-4 py-2 no-underline transition-colors duration-100 hover:bg-gray-100 hover:no-underline" @click.prevent="switcher.menuToggle=false;switcher.selected=index; changeLanguage(switcher, index)">
                               <span class="inline-block font-semibold text-black" x-text="item.label"></span>
                               <template x-if="index==switcher.selected">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="w-4 ml-2 text-black icon icon-tabler icon-tabler-check" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">

@@ -1,6 +1,8 @@
-function translationSwitcher() {
+const translationSwitcher = () => {
+    const storedLanguage = localStorage.getItem('selectedLanguage');
+
     return {
-        selected: 0,
+        selected: storedLanguage || 0,
         languages: [
             {
                 label: 'English',
@@ -44,4 +46,9 @@ function translationSwitcher() {
             el: "Τι είναι το Spark;"
         }
     }
+}
+
+const changeLanguage = (switcher, index) => {
+    translationSwitcher.selected = index;
+    localStorage.setItem('selectedLanguage', index);
 }
