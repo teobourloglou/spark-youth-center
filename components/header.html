@@ -2,9 +2,9 @@
     <nav class="flex items-center justify-between p-6 mx-auto max-w-7xl lg:px-8" aria-label="Global">
       <div class="flex flex-1">
         <div class="hidden lg:flex lg:gap-x-12">
-          <a href="index.html" class="text-sm font-semibold leading-6 text-white transition-transform duration-300 hover:scale-110" x-text="switcher.home[switcher.languages[switcher.selected].lang]"></a>
-          <a href="events.html" class="text-sm font-semibold leading-6 text-white transition-transform duration-300 hover:scale-110">Events</a>
-          <a href="create.html" class="text-sm font-semibold leading-6 text-white transition-transform duration-300 hover:scale-110" x-text="switcher.create[switcher.languages[switcher.selected].lang]"></a>
+          <a href="index.html" class="text-sm font-semibold leading-6 text-white transition-transform !duration-500 hover:scale-110" x-text="switcher.home[switcher.languages[switcher.selected].lang]"></a>
+          <a href="events.html" class="text-sm font-semibold leading-6 text-white transition-transform !duration-500 hover:scale-110">Events</a>
+          <a href="create.html" class="text-sm font-semibold leading-6 text-white transition-transform !duration-500 hover:scale-110" x-text="switcher.create[switcher.languages[switcher.selected].lang]"></a>
         </div>
         <div class="flex lg:hidden">
           <button @click="isOpen = true" type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white">
@@ -19,7 +19,7 @@
       </div>
       <a href="index.html" class="-m-1.5 p-1.5  relative top-[0.4rem]">
         <span class="sr-only">Spark Youth Center</span>
-        <img class="w-24 h-auto transition-transform duration-300 sm:w-48 hover:scale-110" src="photos/spark-logo-white.png" alt="">
+        <img class="w-24 h-auto transition-transform !duration-500 sm:w-48 hover:scale-110" src="photos/spark-logo-white.png" alt="">
       </a>
       <div class="flex justify-end flex-1 lg:gap-x-12">
         <div class="w-24">
@@ -31,7 +31,7 @@
                       <path d="M6 9l6 6l6 -6"></path>
                    </svg></span>
                 </button>
-                <div class="absolute top-0 right-0 z-30 mt-8 text-sm text-black bg-white rounded-xl" x-show="switcher.menuToggle" x-transition:enter="transition ease duration-300 transform" x-transition:enter-start="opacity-0 translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease duration-300 transform" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-4">
+                <div class="absolute top-0 right-0 z-30 mt-8 text-sm text-black bg-white rounded-xl" x-show="switcher.menuToggle" x-transition:enter="transition ease !duration-500 transform" x-transition:enter-start="opacity-0 translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease !duration-500 transform" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-4">
                     <div class="relative z-10 overflow-auto bg-white rounded-xl">
                       <ul class="list-reset">
                         <template x-for="(item, index) in switcher.languages">

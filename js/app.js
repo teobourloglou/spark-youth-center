@@ -60,21 +60,21 @@ function createEventHTML(columns) {
 
   const event = document.createElement("article");
   event.className =
-    "relative flex flex-col justify-end overflow-hidden bg-gray-900 isolate rounded-xl group";
+    "relative flex flex-col justify-end overflow-hidden bg-gray-900 aspect-1/2 carousel-item isolate rounded-xl group";
   event.innerHTML = `
     <div class="w-full h-auto">
         <img src="${image.textContent}" alt="" class="inset-0 w-full aspect-1/2 object-cover">
     </div>
-    <div class="absolute bottom-12 z-20 flex flex-col items-center gap-5 w-full p-3 text-center group-hover:-translate-y-12 transition-all duration-1000">
-        <h3 class=" text-3xl font-dela leading-6 text-white ">${title.textContent}</h3>
+    <div class="absolute bottom-2 lg:bottom-4 z-20 flex flex-col items-center gap-5 w-full p-3 text-center group-hover:-translate-y-8 transition-all !duration-1000">
+        <h3 class="text-3xl font-dela leading-7 text-white ">${title.textContent}</h3>
         <hr class="w-[72px] border-b-[3px] border-flame">
         <p class="text-xl text-white">${date.textContent}</p>
     </div>
-    <div class="absolute w-full h-full  opacity-25 group-hover:opacity-75 bg-black transition-opacity duration-1000"></div>
-    <div class="absolute w-full h-2/3 z-10 top-0 flex flex-col p-3 text-white justify-around opacity-0 group-hover:opacity-100 transition-opacity duration-1000">
-        <time class="font-semibold text-center">🕔 ${time.textContent}</time>
-        <p class="font-semibold text-center">📍 ${location.textContent}</p>
-        <p class="font-semibold text-center">⚡️ ${description.textContent}</p>
+    <div class="absolute w-full h-full opacity-25 group-hover:opacity-75 bg-black transition-opacity !duration-1000"></div>
+    <div class="absolute w-full h-2/3 z-10 top-0 flex flex-col p-3 text-white justify-around opacity-0 group-hover:opacity-100 transition-opacity !duration-1000">
+        <time class="font-semibold  text-center">🕔 ${time.textContent}</time>
+        <p class="font-semibold  text-center">📍 ${location.textContent}</p>
+        <p class="font-semibold  text-center">⚡️ ${description.textContent}</p>
     </div>`;
 
   return event;
