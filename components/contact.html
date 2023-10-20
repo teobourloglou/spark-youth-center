@@ -3,33 +3,26 @@
       <div class="max-w-2xl mx-auto space-y-16 divide-y divide-gray-100 lg:mx-0 lg:max-w-none">
         <div class="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-3">
           <div>
-            <h2 class="text-3xl tracking-tight text-white font-dela">Get in touch</h2>
-            <p class="mt-4 leading-7 text-white">Quam nunc nunc eu sed. Sed rhoncus quis ultricies ac pellentesque.</p>
+            <h2 class="text-3xl tracking-tight text-white font-dela" x-text="switcher.contact_title[switcher.languages[switcher.selected].lang]"></h2>
+            <p class="mt-4 leading-7 text-white" x-text="switcher.contact_text[switcher.languages[switcher.selected].lang]"></p>
           </div>
           <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:col-span-2 lg:gap-8">
             <div class="p-10 transition-all !duration-500 border-2 border-white rounded-xl hover:scale-110">
-              <h3 class="text-base font-semibold leading-7 text-white">Address</h3>
+              <h3 class="text-base font-semibold leading-7 text-white" x-text="switcher.contact_address_label[switcher.languages[switcher.selected].lang]"></h3>
               <dl class="mt-3 space-y-1 text-sm leading-6 text-gray-600">
                 <div>
-                  <dt class="sr-only">Email</dt>
-                  <dd><a class="font-semibold text-flame" href="mailto:spark@spark.com">spark@spark.com</a></dd>
-                </div>
-                <div class="mt-1">
-                  <dt class="sr-only">Phone number</dt>
-                  <dd>+1 (555) 905-2345</dd>
+                  <dt class="sr-only">Address</dt>
+                  <dd><a class="font-semibold text-flame" href="https://maps.app.goo.gl/WMWeZbKfTsc9CwcEA" target="_blank" x-text="switcher.contact_address_value[switcher.languages[switcher.selected].lang]"></a></dd>
                 </div>
               </dl>
             </div>
+            
             <div class="p-10 transition-all !duration-500 border-2 border-white rounded-xl hover:scale-110">
-              <h3 class="text-base font-semibold leading-7 text-white">Phone</h3>
+              <h3 class="text-base font-semibold leading-7 text-white" x-text="switcher.contact_phone_label[switcher.languages[switcher.selected].lang]"></h3>
               <dl class="mt-3 space-y-1 text-sm leading-6 text-gray-600">
                 <div>
                   <dt class="sr-only">Email</dt>
-                  <dd><a class="font-semibold text-flame" href="mailto:spark@spark.com">spark@spark.com</a></dd>
-                </div>
-                <div class="mt-1">
-                  <dt class="sr-only">Phone number</dt>
-                  <dd>+1 (555) 905-3456</dd>
+                  <dd><a class="font-semibold text-flame" href="tel:+302313253292">+30 2313253292</a></dd>
                 </div>
               </dl>
             </div>
@@ -38,24 +31,30 @@
               <dl class="mt-3 space-y-1 text-sm leading-6 text-gray-600">
                 <div>
                   <dt class="sr-only">Email</dt>
-                  <dd><a class="font-semibold text-flame" href="mailto:spark@spark.com">spark@spark.com</a></dd>
-                </div>
-                <div class="mt-1">
-                  <dt class="sr-only">Phone number</dt>
-                  <dd>+1 (555) 905-4567</dd>
+                  <dd><a class="font-semibold text-flame" href="mailto:sparkthessaloniki@gmail.com">sparkthessaloniki@gmail.com</a></dd>
                 </div>
               </dl>
             </div>
             <div class="p-10 transition-all !duration-500 border-2 border-white rounded-xl hover:scale-110">
               <h3 class="text-base font-semibold leading-7 text-white">Social Media</h3>
               <dl class="mt-3 space-y-1 text-sm leading-6 text-gray-600">
-                <div>
-                  <dt class="sr-only">Email</dt>
-                  <dd><a class="font-semibold text-flame" href="mailto:spark@spark.com">spark@spark.com</a></dd>
-                </div>
-                <div class="mt-1">
-                  <dt class="sr-only">Phone number</dt>
-                  <dd>+1 (555) 905-5678</dd>
+                <div class="flex gap-8">
+                  <dt class="sr-only">Facebook</dt>
+                  <dd><a class="" href="https://www.facebook.com/profile.php?id=100091558201864">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler text-flame icon-tabler-brand-facebook" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                      <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"></path>
+                   </svg>
+                  </a></dd>
+                  <dt class="sr-only">Instagram</dt>
+                  <dd><a class="" href="https://www.instagram.com/sparkyouthcenter/">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler text-flame icon-tabler-brand-instagram" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                      <path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z"></path>
+                      <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+                      <path d="M16.5 7.5l0 .01"></path>
+                   </svg>
+                  </a></dd>
                 </div>
               </dl>
             </div>

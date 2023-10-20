@@ -71,10 +71,10 @@ function createEventHTML(columns) {
         <p class="text-xl text-white">${date.textContent}</p>
     </div>
     <div class="absolute w-full h-full opacity-25 group-hover:opacity-75 bg-black transition-opacity !duration-1000"></div>
-    <div class="absolute w-full h-2/3 z-10 top-0 flex flex-col p-3 text-white justify-around opacity-0 group-hover:opacity-100 transition-opacity !duration-1000">
-        <time class="font-semibold  text-center">🕔 ${time.textContent}</time>
-        <p class="font-semibold  text-center">📍 ${location.textContent}</p>
-        <p class="font-semibold  text-center">⚡️ ${description.textContent}</p>
+    <div class="absolute w-full h-2/3 z-10 top-0 flex flex-col p-3 text-white justify-start gap-8 lg:justify-around opacity-0 group-hover:opacity-100 transition-opacity !duration-1000">
+        <time class="font-semibold text-sm sm:text-base  text-center">🕔 ${time.textContent}</time>
+        <p class="font-semibold text-sm sm:text-base  text-center">📍 ${location.textContent}</p>
+        <p class="font-semibold text-sm sm:text-base  text-center">⚡️ ${description.textContent}</p>
     </div>`;
 
   return event;
