@@ -65,13 +65,13 @@ function createEventHTML(columns) {
     <div class="w-full h-auto">
         <img src="${image.textContent}" alt="" class="inset-0 w-full aspect-1/2 object-cover">
     </div>
-    <div class="absolute bottom-2 lg:bottom-4 z-20 flex flex-col items-center gap-5 w-full p-3 text-center group-hover:-translate-y-8 transition-all !duration-1000">
+    <div class="absolute bottom-2 lg:bottom-4 z-20 flex flex-col items-center gap-5 w-full p-3 opacity-100 text-center group-hover:-translate-y-8 group-hover:opacity-0 transition-all !duration-1000">
         <h3 class="text-3xl font-dela leading-7 text-white ">${title.textContent}</h3>
         <hr class="w-[72px] border-b-[3px] border-flame">
         <p class="text-xl text-white">${date.textContent}</p>
     </div>
     <div class="absolute w-full h-full opacity-25 group-hover:opacity-75 bg-black transition-opacity !duration-1000"></div>
-    <div class="absolute w-full h-2/3 z-10 top-0 flex flex-col p-3 text-white justify-start gap-8 lg:justify-around opacity-0 group-hover:opacity-100 transition-opacity !duration-1000">
+    <div class="absolute w-full h-full z-10 -top-8 flex flex-col p-3 text-white justify-start gap-8 lg:justify-around opacity-0 group-hover:opacity-100 group-hover:top-0 transition-all delay-[350ms] !duration-1000">
         <time class="font-semibold text-sm sm:text-base  text-center">🕔 ${time.textContent}</time>
         <p class="font-semibold text-sm sm:text-base  text-center">📍 ${location.textContent}</p>
         <p class="font-semibold text-sm sm:text-base  text-center">⚡️ ${description.textContent}</p>
