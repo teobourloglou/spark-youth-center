@@ -45,9 +45,25 @@ const translationSwitcher = () => {
             en: "YOU ARE CREATED TO DREAM, EXPLORE &",
             el: "YOU ARE CREATED TO DREAM, EXPLORE &",
         },
-        statement_create: {
-            en: "CREATE",
-            el: "CREATE",
+        statement_grow: {
+            en: "GROW",
+            el: "GROW",
+        },
+        statement_footer: {
+            en: "You are created to ",
+            el: "You are created to ",
+        },
+        statement_footer_dream: {
+            en: "Dream, ",
+            el: "Dream, ",
+        },
+        statement_footer_explore: {
+            en: "Explore & ",
+            el: "Explore & ",
+        },
+        statement_footer_grow: {
+            en: "Grow",
+            el: "Grow",
         },
         // About
         what_is_spark: {
@@ -78,14 +94,6 @@ const translationSwitcher = () => {
         space_2_text: {
             en: "Seminar/Class Room<br>Photo Studio Space<br>Content Creator Studio",
             el: "Seminar/Class Room<br>Photo Studio Space<br>Content Creator Studio",
-        },
-        space_3_title: {
-            en: "Upper Room",
-            el: "Upper Room",
-        },
-        space_3_text: {
-            en: "MEETING ROOM<br>CONNECT WITH YOUR CREW<br><br>Spark provides everything you need for a productive meeting with your team or your clients!",
-            el: "MEETING ROOM<br>CONNECT WITH YOUR CREW<br><br>Spark provides everything you need for a productive meeting with your team or your clients!",
         },
         our_spaces_text: {
             en: "​Host up to 50 people in our Main or Side space.",

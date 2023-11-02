@@ -1,5 +1,14 @@
 <footer class="">
     <div class="px-6 py-20 mx-auto mt-16 overflow-hidden max-w-7xl sm:py-24 lg:px-8">
+      <div class="flex flex-col items-center gap-10 pb-20">
+        <img class="w-24 h-auto transition-transform !duration-500 sm:w-48 hover:scale-110" src="photos/spark-logo-white.png" alt="">
+        <div class="flex gap-2">
+          <p class="text-white" x-text="switcher.statement_footer[switcher.languages[switcher.selected].lang]"></p>
+          <div class="relative mx-auto text-center group"><p class="text-white group-hover:rotate-[20deg] origin-top-left transition-all !duration-[700ms]" x-text="switcher.statement_footer_dream[switcher.languages[switcher.selected].lang]"></p><span class="absolute text-xl top-0 transition-all !duration-[700ms] opacity-0 right-[10%] group-hover:opacity-100 group-hover:-translate-y-3  group-hover:scale-125 group-hover:rotate-12">💭</span></div>
+          <div class="relative mx-auto text-center group"><p class="text-white group-hover:-rotate-[20deg] origin-top-right transition-all !duration-[700ms]" x-text="switcher.statement_footer_explore[switcher.languages[switcher.selected].lang]"></p><span class="absolute text-xl top-0 transition-all !duration-[700ms] opacity-0 left-[10%] group-hover:opacity-100 group-hover:-translate-y-3 group-hover:scale-125 group-hover:-rotate-12">🧭</span></div>
+          <div class="relative mx-auto text-center group"><p class="text-white group-hover:-translate-y-1 transition-all !duration-[700ms]" x-text="switcher.statement_footer_grow[switcher.languages[switcher.selected].lang]"></p><span class="absolute text-xl top-0 transition-all !duration-[700ms] opacity-0 left-[40%] group-hover:opacity-100 group-hover:-translate-y-7  group-hover:scale-125 group-hover:rotate-12">🌱</span></div>
+        </div>
+      </div>
       <nav class="-mb-6 columns-1 sm:flex sm:justify-center sm:space-x-12" aria-label="Footer">
         <div class="flex justify-center pb-6">
           <a href="index.html" class="text-sm font-semibold leading-6 text-white">Home</a>
