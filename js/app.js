@@ -11,8 +11,9 @@ const fetchEvents = (url, limited = false) => {
   fetch(url)
     .then((response) => response.text())
     .then((html) => {
+      const sanitizedHTML = DOMPurify.sanitize(html);
       const parser = new DOMParser();
-      const doc = parser.parseFromString(html, "text/html");
+      const doc = parser.parseFromString(sanitizedHTML, "text/html");
       const rows = Array.from(doc.querySelectorAll("table tr")).slice(3);
       const currentDate = new Date();
       const currentDay = currentDate.getDate();
