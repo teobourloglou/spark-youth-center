@@ -24,17 +24,17 @@ const translationSwitcher = () => {
             el: 'Δημιούργησε'
         },
         get_involved: {
-            en: 'Get involved',
-            el: 'Συμμετέχετε'
+            en: 'Host your own event',
+            el: 'Τρέξε το event σου'
         },
         upcoming_events: {
             en: 'Upcoming Events',
-            el: 'Επερχόμενα Events'
+            el: 'Τα events μας'
         },
         // Hero
         title: {
-            en: "Spark: Stewarding Dreams.",
-            el: "Spark: Τολμώντας τα όνειρα.",
+            en: "Spark: Stewarding Dreams",
+            el: "Spark: Όνειρα σε πράξη",
         },
         description: {
             en: "A shared community space that exists for the youth in Thessaloniki to be equipped, discover their gifts and develop dreams.",
@@ -42,12 +42,16 @@ const translationSwitcher = () => {
         },
         // Statement
         statement: {
-            en: "YOU ARE CREATED TO DREAM, EXPLORE &",
-            el: "ΔΗΜΙΟΥΡΓΗΘΗΚΕΣ ΓΙΑ ΝΑ ΟΝΕΙΡΕΥΕΣΑΙ, ΝΑ ΑΝΑΚΑΛΥΠΤΕΙΣ &",
+            en: "",
+            el: "ΑΝΑΚΑΛΥΨΕ",
         },
-        statement_grow: {
-            en: "GROW",
-            el: "ΔΗΜΙΟΥΡΓΕΙΣ",
+        statement_2: {
+            en: "YOU ARE CREATED TO DREAM, EXPLORE &",
+            el: "ΟΝΕΙΡΕΨΟΥ",
+        },
+        statement_3: {
+            en: "CREATE",
+            el: "ΔΗΜΙΟΥΡΓΗΣΕ",
         },
         statement_footer: {
             en: "You are created to ",
@@ -115,7 +119,7 @@ const translationSwitcher = () => {
         },
         create_text: {
             en: "Host your Workshop, Event or Project!<br>Workshops, team building activities, exhibitions, talks, hackathons..<br><br>Whatever your need to host Spark will support you!<br><br>We provide hosting services and production support. You need an extra set of hands?<br>We are your support team!!",
-            el: "Διοργάνωσε το δικό σου εργαστήριο, event, ομαδική δραστηριότητα, έκθεση, ομιλία...<br><br>Οτιδήποτε θέλεις να διοργανώσεις, το Spark είναι δίπλα σου, για να το υλοποιήσεις!<br><br>Σου προσφέρουμε τους χώρους συνεδριάσεων/αιθουσών, για να φιλοξενήσεις το δικό σου event και την υποστήριξη για τη διοργάνωση και τη διαχείριση του! Χρειάζεσαι περισσότερη βοήθεια;<br>Είμαστε εδώ, για να στηρίξουμε εσένα και την ομάδα σου!!",
+            el: "Διοργάνωσε το δικό σου εργαστήριο, event, ομαδική δραστηριότητα, έκθεση, ομιλία...<br><br>Οτιδήποτε θέλεις να διοργανώσεις, το Spark είναι δίπλα σου, για να το υλοποιήσεις!<br><br>Σου προσφέρουμε τους χώρους συνεδριάσεων/αιθουσών, για να φιλοξενήσεις το δικό σου event<br>και την υποστήριξη για τη διοργάνωση και τη διαχείριση του! Χρειάζεσαι περισσότερη βοήθεια;<br>Είμαστε εδώ, για να στηρίξουμε εσένα και την ομάδα σου!!",
         },
         create_button: {
             en: "Get in touch HERE",

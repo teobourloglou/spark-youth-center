@@ -1,13 +1,19 @@
 <div class="px-6 pb-32 mx-auto mt-12 max-w-7xl pt-36 sm:pt-60 lg:px-8 lg:pt-32">
-    <div class="max-w-2xl mx-auto mb-12 lg:mx-0 lg:max-w-none">
-      <h2 class="text-3xl tracking-tight text-center text-white font-dela sm:text-4xl" x-text="switcher.create_title[switcher.languages[switcher.selected].lang]"></h2>
-      <div class="flex flex-col mt-6 gap-x-8 gap-y-20">
-        <div class="w-full lg:flex-auto">
-          <p class="text-lg leading-8 text-center text-white" x-html="switcher.create_text[switcher.languages[switcher.selected].lang]"></p>
-        </div>
+  <div class="max-w-2xl mx-auto mb-12 lg:mx-0 lg:max-w-none">
+    <h2
+      class="text-3xl tracking-tight text-center text-white font-dela sm:text-4xl"
+      x-text="switcher.create_title[switcher.languages[switcher.selected].lang]"
+    ></h2>
+    <div class="flex flex-col mt-6 gap-x-8 gap-y-20">
+      <div class="w-full lg:flex-auto">
+        <p
+          class="text-lg leading-8 text-center text-white"
+          x-html="switcher.create_text[switcher.languages[switcher.selected].lang]"
+        ></p>
       </div>
     </div>
-    <div class="flex justify-center">
-        <a href="#" class="rounded-xl transition-colors mx-auto !duration-500 bg-flame px-3.5 py-2.5 text-sm font-semibold text-black hover:bg-flame-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-flame-hover" x-text="switcher.create_button[switcher.languages[switcher.selected].lang]"></a>
-    </div>
+  </div>
+  <div class="flex justify-center" id="form-container">
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd5_Cpa8eKEfvzCFFl2qfv4Os0Xx0JyMMlDdb5GbYuV1t5RUw/viewform?embedded=true" width="800" height="900" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+  </div>
 </div>

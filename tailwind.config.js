@@ -8,8 +8,8 @@ module.exports = {
     },
     extend: {
       colors: {
-        flame: "#F5631A",
-        "flame-hover": "#B34714",
+        flame: "#f9bb0d",
+        "flame-hover": "#c7950a",
       },
       backgroundImage: {
         'line' : "url('../photos/line.svg')",
