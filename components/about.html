@@ -1,17 +1,18 @@
 <div class="overflow-hidden isolate">
     <div class="pb-32 mt-32 sm:mt-40">
         <div class="px-6 mx-auto max-w-7xl lg:flex lg:px-8">
-            <div class="grid max-w-2xl grid-cols-1 mx-auto gap-x-12 gap-y-16 lg:mx-0 lg:min-w-full lg:max-w-none lg:flex-none lg:gap-y-8">
-                <div class="lg:col-end-1 lg:w-full lg:max-w-lg lg:pb-8">
+            <div class="flex flex-col gap-6 lg:flex-row">
+                <div class="lg:w-full lg:pb-8">
                     <h2 class="text-3xl tracking-tight text-white font-dela sm:text-4xl" x-text="switcher.what_is_spark[switcher.languages[switcher.selected].lang]"></h2>
                     <p class="mt-6 text-xl leading-8 text-white" x-html="switcher.about_text[switcher.languages[switcher.selected].lang]"></p>
                 </div>
-                <div class="flex flex-wrap items-start justify-end gap-6 sm:gap-8 lg:contents">
-                    <div class="flex-auto w-0 lg:ml-auto lg:w-auto lg:flex-none">
-                        <img src="photos/content_1.jpg" alt="" class="aspect-[7/5] w-full md:w-[37rem] max-w-none rounded-xl transition-transform !duration-500 hover:rotate-2 bg-black object-cover">
-                    </div>
+                <div class="flex justify-center w-full lg:items-center">
+                    <video width="320" height="240" controls autoplay muted loop class="rounded-xl">
+                        <source src="photos/video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video> 
                 </div>
-            </div>
+            </div>            
         </div>
     </div>
 </div>
