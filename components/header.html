@@ -22,6 +22,22 @@
         <img class="w-24 h-auto transition-transform !duration-500 sm:w-48 hover:scale-110" src="photos/spark-logo-white.png" alt="">
       </a>
       <div class="flex justify-end flex-1 lg:gap-x-12">
+        <a href="https://www.facebook.com/profile.php?id=100091558201864" target="_blank" class="text-white lg:block hidden transition-transform !duration-500 hover:rotate-6">
+          <span class="sr-only">Facebook</span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"></path>
+         </svg>
+        </a>
+        <a href="https://www.instagram.com/sparkyouthcenter/" target="_blank" class="text-white transition-transform lg:block hidden !duration-500 hover:rotate-6">
+          <span class="sr-only">Instagram</span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z"></path>
+            <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+            <path d="M16.5 7.5l0 .01"></path>
+         </svg>
+        </a>
         <div class="w-24">
             <div class="relative flex justify-end lg:block" @click.away="switcher.menuToggle=false">
                 <button class="text-sm font-semibold text-white focus:outline-none" @click.prevent="switcher.menuToggle=!switcher.menuToggle">
@@ -79,6 +95,24 @@
           <a href="index.html" class="block px-3 py-2 -mx-3 text-base font-semibold leading-7 text-black rounded-lg hover:bg-gray-50" x-text="switcher.home[switcher.languages[switcher.selected].lang]"></a>
           <a href="events.html" class="block px-3 py-2 -mx-3 text-base font-semibold leading-7 text-black rounded-lg hover:bg-gray-50">Events</a>
           <a href="create.html" class="block px-3 py-2 -mx-3 text-base font-semibold leading-7 text-black rounded-lg hover:bg-gray-50" x-text="switcher.create[switcher.languages[switcher.selected].lang]"></a>
+          <div class="flex items-center justify-center gap-8">
+            <a href="https://www.facebook.com/profile.php?id=100091558201864" target="_blank" class="text-black transition-transform !duration-500 hover:rotate-6">
+              <span class="sr-only">Facebook</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"></path>
+             </svg>
+            </a>
+            <a href="https://www.instagram.com/sparkyouthcenter/" target="_blank" class="text-black transition-transform !duration-500 hover:rotate-6">
+              <span class="sr-only">Instagram</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z"></path>
+                <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+                <path d="M16.5 7.5l0 .01"></path>
+             </svg>
+            </a>
+          </div>
         </div>
       </div>
     </div>

@@ -4,7 +4,7 @@
       <div class="px-6 pb-32 mx-auto max-w-7xl pt-36 sm:pt-60 lg:px-8 lg:pt-32">
         <div class="max-w-2xl mx-auto gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
           <div class="w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
-            <h1 class="text-4xl font-bold leading-10 text-white font-dela sm:text-6xl" x-text="switcher.title[switcher.languages[switcher.selected].lang]"></h1>
+            <h1 class="text-4xl font-bold leading-10 text-white font-dela sm:text-6xl" x-html="switcher.title[switcher.languages[switcher.selected].lang]"></h1>
             <p class="relative mt-6 text-lg font-semibold leading-8 text-white sm:max-w-md lg:max-w-none" x-text="switcher.description[switcher.languages[switcher.selected].lang]"></p>
             <div class="flex items-center mt-10 gap-x-6">
               <a href="events.html" class="rounded-xl transition-colors !duration-500 bg-flame px-3.5 py-2.5 text-sm font-semibold text-black hover:bg-flame-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-flame-hover" x-text="switcher.upcoming_events[switcher.languages[switcher.selected].lang]"></a>

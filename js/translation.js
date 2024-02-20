@@ -33,8 +33,8 @@ const translationSwitcher = () => {
         },
         // Hero
         title: {
-            en: "Spark: Stewarding Dreams",
-            el: "Spark: Όνειρα σε πράξη",
+            en: "Spark<br>Stewarding Dreams",
+            el: "Spark<br>Όνειρα σε πράξη",
         },
         description: {
             en: "A shared community space that exists for the youth in Thessaloniki to be equipped, discover their gifts and develop dreams.",
