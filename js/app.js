@@ -12,7 +12,7 @@ const fetchOrCacheEvents = (url, limited = false) => {
   const cachedEventsData = cachedEvents.data;
   const cachedEventsTimestamp = cachedEvents.timestamp;
 
-  const cacheExpiration = 86400000;
+  const cacheExpiration = 60000;
   const isCacheValid = cachedEventsData.length > 0 && Date.now() - cachedEventsTimestamp < cacheExpiration;
 
   isCacheValid ? displayEvents(cachedEventsData, limited) : fetchEvents(url, limited);
