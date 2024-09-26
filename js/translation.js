@@ -112,6 +112,14 @@ const translationSwitcher = () => {
             en: "Events",
             el: "Events",
         },
+        events_previous_events: {
+            en: "Previous Events",
+            el: "Προηγούμενα Events",
+        },
+        events_upcoming_events: {
+            en: "Upcoming Events",
+            el: "Επόμενα Events",
+        },
         // Create
         create_title: {
             en: "CREATE!",

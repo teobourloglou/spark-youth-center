@@ -5,7 +5,47 @@
         <span class="absolute text-2xl top-0 transition-all !duration-500 opacity-0 left-1/2 group-hover:translate-x-20 group-hover:opacity-100 group-hover:-translate-y-6 group-hover:scale-125 group-hover:rotate-12">🎉</span>
         <span class="absolute text-2xl top-0  opacity-0 right-1/2 transition-all !duration-500 delay-100 group-hover:-translate-x-24 group-hover:opacity-100 group-hover:translate-y-4 group-hover:scale-125 group-hover:-rotate-[30deg]">🤪</span>
       </div>
-      <div id="eventContainer" class="grid max-w-2xl grid-cols-1 gap-8 px-8 mx-auto mt-16 lg:px-0 auto-rows-fr sm:mt-20 md:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 xl:grid-cols-4"></div>
+      <h3 x-text="switcher.events_upcoming_events[switcher.languages[switcher.selected].lang]" class="mx-auto mt-8 text-2xl tracking-tight text-center text-white font-dela"></h3>
+      <div class="grid max-w-2xl grid-cols-1 gap-8 px-8 mx-auto mt-16 lg:px-0 auto-rows-fr sm:mt-20 md:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 xl:grid-cols-4">
+        <template x-for="event in upcomingEvents">
+          <div class="relative flex flex-col justify-end overflow-hidden bg-gray-900 aspect-1/2 carousel-item isolate rounded-xl group">
+            <div class="w-full h-auto">
+              <img :src="event.image" alt="" class="inset-0 object-cover w-full aspect-1/2">
+            </div>
+            <div class="absolute bottom-2 lg:bottom-4 z-20 flex flex-col items-center gap-5 w-full p-3 opacity-100 text-center group-hover:-translate-y-8 group-hover:opacity-0 transition-all !duration-1000">
+                <h3 x-text="event.title" class="text-3xl leading-7 text-white font-dela "></h3>
+                <hr class="w-[72px] border-b-[3px] border-flame">
+                <p x-text="event.date" class="text-xl text-white"></p>
+            </div>
+            <div class="absolute w-full h-full opacity-25 group-hover:opacity-75 bg-black transition-opacity !duration-1000"></div>
+            <div class="absolute w-full h-full z-10 -top-8 flex flex-col p-3 text-white justify-start gap-8 lg:justify-around opacity-0 group-hover:opacity-100 group-hover:top-0 transition-all delay-[350ms] !duration-1000">
+                <time x-text="'🕔 ' + event.time" class="text-sm font-semibold text-center sm:text-base"></time>
+                <p x-text="'📍 ' + event.location" class="text-sm font-semibold text-center sm:text-base"></p>
+                <p x-text="'⚡️ ' + event.description" class="text-sm font-semibold text-center sm:text-base"></p>
+            </div>
+          </div>
+        </template>
+      </div>
+      <h3 x-text="switcher.events_previous_events[switcher.languages[switcher.selected].lang]" class="mx-auto mt-16 text-2xl tracking-tight text-center text-white font-dela"></h3>
+      <div class="grid max-w-2xl grid-cols-1 gap-8 px-8 mx-auto mt-16 lg:px-0 auto-rows-fr sm:mt-20 md:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 xl:grid-cols-4">
+        <template x-for="event in previousEvents">
+          <div class="relative flex flex-col justify-end overflow-hidden bg-gray-900 aspect-1/2 carousel-item isolate rounded-xl group">
+            <div class="w-full h-auto">
+              <img :src="event.image" alt="" class="inset-0 object-cover w-full aspect-1/2">
+            </div>
+            <div class="absolute bottom-2 lg:bottom-4 z-20 flex flex-col items-center gap-5 w-full p-3 opacity-100 text-center group-hover:-translate-y-8 group-hover:opacity-0 transition-all !duration-1000">
+                <h3 x-text="event.title" class="text-3xl leading-7 text-white font-dela "></h3>
+                <hr class="w-[72px] border-b-[3px] border-flame">
+                <p x-text="event.date" class="text-xl text-white"></p>
+            </div>
+            <div class="absolute w-full h-full opacity-25 group-hover:opacity-75 bg-black transition-opacity !duration-1000"></div>
+            <div class="absolute w-full h-full z-10 -top-8 flex flex-col p-3 text-white justify-start gap-8 lg:justify-around opacity-0 group-hover:opacity-100 group-hover:top-0 transition-all delay-[350ms] !duration-1000">
+                <time x-text="'🕔 ' + event.time" class="text-sm font-semibold text-center sm:text-base"></time>
+                <p x-text="'📍 ' + event.location" class="text-sm font-semibold text-center sm:text-base"></p>
+                <p x-text="'⚡️ ' + event.description" class="text-sm font-semibold text-center sm:text-base"></p>
+            </div>
+          </div>
+        </template>
+      </div>
     </div>
   </div>
-  
