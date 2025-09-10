@@ -1,5 +1,5 @@
 const sheetUrl =
-    "https://docs.google.com/spreadsheets/d/e/2PACX-1vRbhxTRBOlPvSUHRA17RpLy_MW33Y1lcmvMzcG2xjQqiFVuqKIN3iwKKT8zAb9jDz63bQZ7VVNyecE5/pubhtml?gid=0&single=true";
+    "https://docs.google.com/spreadsheets/d/e/2PACX-1vRbhxTRBOlPvSUHRA17RpLy_MW33Y1lcmvMzcG2xjQqiFVuqKIN3iwKKT8zAb9jDz63bQZ7VVNyecE5/pub?gid=0&single=true&output=csv";
 
 /**
  * Fetch and load components into specified element IDs.
@@ -60,20 +60,20 @@ const data = () => {
         fetchEventsData() {
             fetch(sheetUrl)
                 .then((response) => response.text())
-                .then((html) => {
-                    this.decodeEvents(html);
+                .then((csv) => {
+                    this.decodeEvents(csv);
                 })
                 .catch((error) => {
                     console.error("Error fetching data from Google Sheet:", error);
                 });
         },
 
-        decodeEvents(html) {
-            const sanitizedHTML = DOMPurify.sanitize(html);
-            const doc = new DOMParser().parseFromString(sanitizedHTML, "text/html");
-            const rows = Array.from(doc.querySelectorAll("table tr")).slice(3);
+        decodeEvents(csv) {
+            const rows = csv.trim().split("\n");
 
-            const { previousEvents, upcomingEvents } = this.processRows(rows);
+            const dataRows = rows.slice(1).map(this.splitCSVRow);
+
+            const { previousEvents, upcomingEvents } = this.processRows(dataRows);
 
             this.saveEventsToCache("cachedPreviousEvents", previousEvents);
             this.saveEventsToCache("cachedUpcomingEvents", upcomingEvents);
@@ -82,25 +82,30 @@ const data = () => {
             this.upcomingEvents = upcomingEvents;
         },
 
+        splitCSVRow(row) {
+            const regex = /("([^"]|"")*"|[^,]+)/g;
+            return row.match(regex).map(cell =>
+                cell.replace(/^"|"$/g, "").replace(/""/g, '"').trim()
+            );
+        },
+
         processRows(rows) {
             const previousEvents = [];
             const upcomingEvents = [];
 
-            rows.forEach((row) => {
-                const columns = row.querySelectorAll("td");
-                const match = columns[1].textContent.match(/(\d{1,2})\/(\d{1,2})/);
+            rows.forEach(columns => {
+                const eventDetails = this.extractEventDetails(columns);
 
-                if (match) {
-                    const [eventDay, eventMonth] = match.slice(1).map(Number);
-                    const eventDetails = this.extractEventDetails(columns);
+                const eventDate = this.parseEventDate(eventDetails.date);
+                if (!eventDate) {
+                    console.error("Invalid date format:", eventDetails.date);
+                    return;
+                }
 
-                    if (this.isUpcomingEvent(eventDay, eventMonth)) {
-                        upcomingEvents.push(eventDetails);
-                    } else {
-                        previousEvents.push(eventDetails);
-                    }
+                if (this.isUpcomingEvent(eventDate)) {
+                    upcomingEvents.push(eventDetails);
                 } else {
-                    console.error("Date format does not match.");
+                    previousEvents.push(eventDetails);
                 }
             });
 
@@ -109,23 +114,33 @@ const data = () => {
 
         extractEventDetails(columns) {
             return {
-                title: columns[0].textContent,
-                date: columns[1].textContent,
-                image: columns[2].textContent,
-                time: columns[3].textContent,
-                location: columns[4].textContent,
-                description: columns[5].textContent,
+                title: columns[0],
+                date: columns[1],
+                image: columns[2],
+                time: columns[3],
+                location: columns[4],
+                description: columns[5],
             };
         },
 
-        isUpcomingEvent(eventDay, eventMonth) {
-            const currentDay = (new Date()).getDate();
-            const currentMonth = (new Date()).getMonth() + 1;
-            return eventMonth > currentMonth || (eventMonth === currentMonth && eventDay >= currentDay);
+        parseEventDate(dateStr) {
+            // expects format: DD/MM/YYYY
+            const match = dateStr.match(/(\d{1,2})\/(\d{1,2})\/(\d{4})/);
+            if (!match) return null;
+
+            const [ , day, month, year ] = match.map(Number);
+            return new Date(year, month - 1, day);
+        },
+
+        isUpcomingEvent(eventDate) {
+            const today = new Date();
+            today.setHours(0, 0, 0, 0);
+            return eventDate >= today;
         },
 
         saveEventsToCache(key, data) {
             localStorage.setItem(key, JSON.stringify({ data, timestamp: Date.now() }));
         }
+
     };
 };

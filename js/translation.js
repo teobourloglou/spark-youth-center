@@ -120,6 +120,10 @@ const translationSwitcher = () => {
             en: "Upcoming Events",
             el: "Επόμενα Events",
         },
+        no_upcoming_events: {
+            en: "No events planned yet.",
+            el: "Δεν έχουν προγραμματιστεί events ακόμα."
+        },
         // Create
         create_title: {
             en: "CREATE!",

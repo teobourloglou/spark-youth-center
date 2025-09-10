@@ -733,6 +733,10 @@ video {
   margin-top: 2rem;
 }
 
+.my-16 {
+  margin: 4rem auto;
+}
+
 .block {
   display: block;
 }

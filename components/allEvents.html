@@ -6,7 +6,12 @@
         <span class="absolute text-2xl top-0  opacity-0 right-1/2 transition-all !duration-500 delay-100 group-hover:-translate-x-24 group-hover:opacity-100 group-hover:translate-y-4 group-hover:scale-125 group-hover:-rotate-[30deg]">🤪</span>
       </div>
       <h3 x-text="switcher.events_upcoming_events[switcher.languages[switcher.selected].lang]" class="mx-auto mt-8 text-2xl tracking-tight text-center text-white font-dela"></h3>
-      <div class="grid max-w-2xl grid-cols-1 gap-8 px-8 mx-auto mt-16 lg:px-0 auto-rows-fr sm:mt-20 md:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 xl:grid-cols-4">
+      
+      <div x-show="upcomingEvents.length === 0" class="text-center my-16 py-8">
+          <span x-text="switcher.no_upcoming_events[switcher.languages[switcher.selected].lang]" class="mx-auto text-xl tracking-tight text-center text-white"></span>
+      </div>
+      
+      <div x-show="upcomingEvents.length !== 0" class="grid max-w-2xl grid-cols-1 gap-8 px-8 mx-auto mt-16 lg:px-0 auto-rows-fr sm:mt-20 md:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 xl:grid-cols-4">
         <template x-for="event in upcomingEvents">
           <div class="relative flex flex-col justify-end overflow-hidden bg-gray-900 aspect-1/2 carousel-item isolate rounded-xl group">
             <div class="w-full h-auto">
@@ -28,7 +33,7 @@
       </div>
       <h3 x-text="switcher.events_previous_events[switcher.languages[switcher.selected].lang]" class="mx-auto mt-16 text-2xl tracking-tight text-center text-white font-dela"></h3>
       <div class="grid max-w-2xl grid-cols-1 gap-8 px-8 mx-auto mt-16 lg:px-0 auto-rows-fr sm:mt-20 md:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 xl:grid-cols-4">
-        <template x-for="event in previousEvents">
+        <template x-for="event in previousEvents.slice().reverse()">
           <div class="relative flex flex-col justify-end overflow-hidden bg-gray-900 aspect-1/2 carousel-item isolate rounded-xl group">
             <div class="w-full h-auto">
               <img :src="event.image" alt="" class="inset-0 object-cover w-full aspect-1/2">
